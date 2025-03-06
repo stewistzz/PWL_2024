@@ -34,5 +34,12 @@ Route::get('/', function () {
 
 // praktikum 1 - langkah 7 Membuat route ‘/about’ yang akan menampilkan NIM dan nama Anda
 Route::get('/about', function () {
-    return "(2341760188) Dimas Setyo Nugroho";
+    return "(2341760188)_Dimas Setyo Nugroho";
+});
+
+
+/*Route Parameters - praktikum 1 langkah 8 emanggil route /user/{name} 
+sekaligus mengirimkan parameter berupa nama user $name */
+Route::get('/user/{name}', function ($name) {
+    return 'Nama saya '.$name;
 });
