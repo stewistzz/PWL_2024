@@ -51,3 +51,22 @@ Suatu route, juga bisa menerima lebih dari 1 parameter
 Route::get('/posts/{post}/comments/{comment}', function ($postId, $commentId) {
     return 'Pos ke-' . $postId . " Komentar ke-: " . $commentId;
 });
+
+
+/*
+Optional Parameters - praktikum 1 langkah 14
+Kita akan memanggil route /user sekaligus mengirimkan parameter berupa nama user
+$name dimana parameternya bersifat opsional.
+*/
+Route::get('/user/{name?}', function ($name = null) {
+    return 'Nama saya ' . $name;
+});
+
+/*
+Optional Parameters - praktikum 1 langkah 17
+Kita akan memanggil route /user sekaligus mengirimkan parameter berupa nama user
+$name dimana parameternya bersifat opsional - bagian 2.
+*/
+Route::get('/user/{name?}', function ($name = 'John') {
+    return 'Nama saya ' . $name;
+});
