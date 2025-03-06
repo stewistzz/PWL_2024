@@ -21,3 +21,8 @@ Route::get('/', function () {
 Route::get('/hello', function () {
     return "Hello World";
 });
+
+// praktikum 1 - langkah 4
+Route::get('/world', function () {
+    return "World";
+});
