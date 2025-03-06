@@ -26,3 +26,9 @@ Route::get('/hello', function () {
 Route::get('/world', function () {
     return "World";
 });
+
+// praktikum 1 - langkah 6 Membuat route ’/’ yang menampilkan pesan ‘Selamat Datang'
+Route::get('/', function () {
+    return "Selamat Datang";
+});
+
