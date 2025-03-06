@@ -41,5 +41,13 @@ Route::get('/about', function () {
 /*Route Parameters - praktikum 1 langkah 8 emanggil route /user/{name} 
 sekaligus mengirimkan parameter berupa nama user $name */
 Route::get('/user/{name}', function ($name) {
-    return 'Nama saya '.$name;
+    return 'Nama saya ' . $name;
+});
+
+/*
+Route Parameters - praktikum 1 langkah 11
+Suatu route, juga bisa menerima lebih dari 1 parameter
+*/
+Route::get('/posts/{post}/comments/{comment}', function ($postId, $commentId) {
+    return 'Pos ke-' . $postId . " Komentar ke-: " . $commentId;
 });
